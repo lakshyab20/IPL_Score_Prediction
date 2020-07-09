@@ -3,6 +3,9 @@
 * In this repository, I have predicted IPL first innings score and deployed it to a web app using Flask and Heroku.
 
 <br>
+* To view the app deployed on Heroku click on this link 
+
+		https://ipl-score-prediction-app.herokuapp.com/
 <br>
 <h2>Setup</h2>
 
