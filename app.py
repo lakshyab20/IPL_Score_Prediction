@@ -85,7 +85,7 @@ def predict():
         data = np.array([temp_array])
         my_prediction = int(regressor.predict(data)[0])
               
-        return render_template('result.html', lower_limit = my_prediction-10, upper_limit = my_prediction+5)
+        return render_template('result.html', lower_limit =(10)-my_prediction, upper_limit =(-5)-my_prediction)
 
 
 
