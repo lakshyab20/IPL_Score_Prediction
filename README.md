@@ -4,8 +4,7 @@
 
 <br>
 * To view the app deployed on Heroku click on this link 
-
-		https://ipl-score-prediction-app.herokuapp.com/
+<a href="https://ipl-score-prediction-app.herokuapp.com/"> Click Here</a> 
 <br>
 <h2>Setup</h2>
 
