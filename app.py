@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Load the Ridge Regression \odel
-filename = 'ipl_score_pred_model_xg.pkl'
+filename = 'ipl_score_pred_model_lr.pkl'
 regressor = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
@@ -56,23 +56,23 @@ def predict():
         elif bowling_team == 'Sunrisers Hyderabad':
             temp_array = temp_array + [0,0,0,0,0,0,0,1]
             
-        Venue = request.form['venue']
-        if Venue == 'Kolkata':
-            temp_array = temp_array + [1,0,0,0,0,0,0,0]
-        elif Venue == 'Delhi':
-            temp_array = temp_array + [0,1,0,0,0,0,0,0]
-        elif Venue == 'Bangalore':
-            temp_array = temp_array + [0,0,1,0,0,0,0,0]
-        elif Venue == 'Chennai':
-            temp_array = temp_array + [0,0,0,1,0,0,0,0]
-        elif Venue == 'Hyderabad':
-            temp_array = temp_array + [0,0,0,0,1,0,0,0]
-        elif Venue == 'Jaipur':
-            temp_array = temp_array + [0,0,0,0,0,1,0,0]
-        elif Venue == 'Mumbai':
-            temp_array = temp_array + [0,0,0,0,0,0,1,0]
-        elif Venue == 'Mohali':
-            temp_array = temp_array + [0,0,0,0,0,0,0,1]
+#         Venue = request.form['venue']
+#         if Venue == 'Kolkata':
+#             temp_array = temp_array + [1,0,0,0,0,0,0,0]
+#         elif Venue == 'Delhi':
+#             temp_array = temp_array + [0,1,0,0,0,0,0,0]
+#         elif Venue == 'Bangalore':
+#             temp_array = temp_array + [0,0,1,0,0,0,0,0]
+#         elif Venue == 'Chennai':
+#             temp_array = temp_array + [0,0,0,1,0,0,0,0]
+#         elif Venue == 'Hyderabad':
+#             temp_array = temp_array + [0,0,0,0,1,0,0,0]
+#         elif Venue == 'Jaipur':
+#             temp_array = temp_array + [0,0,0,0,0,1,0,0]
+#         elif Venue == 'Mumbai':
+#             temp_array = temp_array + [0,0,0,0,0,0,1,0]
+#         elif Venue == 'Mohali':
+#             temp_array = temp_array + [0,0,0,0,0,0,0,1]
             
         overs = float(request.form['overs'])
         runs = int(request.form['runs'])
