@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Load the Ridge Regression \odel
-filename = 'ipl_score_pred_model.pkl'
+filename = 'ipl_score_pred_model_xg.pkl'
 regressor = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
