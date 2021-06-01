@@ -55,24 +55,7 @@ def predict():
             temp_array = temp_array + [0,0,0,0,0,0,1,0]
         elif bowling_team == 'Sunrisers Hyderabad':
             temp_array = temp_array + [0,0,0,0,0,0,0,1]
-            
-#         Venue = request.form['venue']
-#         if Venue == 'Kolkata':
-#             temp_array = temp_array + [1,0,0,0,0,0,0,0]
-#         elif Venue == 'Delhi':
-#             temp_array = temp_array + [0,1,0,0,0,0,0,0]
-#         elif Venue == 'Bangalore':
-#             temp_array = temp_array + [0,0,1,0,0,0,0,0]
-#         elif Venue == 'Chennai':
-#             temp_array = temp_array + [0,0,0,1,0,0,0,0]
-#         elif Venue == 'Hyderabad':
-#             temp_array = temp_array + [0,0,0,0,1,0,0,0]
-#         elif Venue == 'Jaipur':
-#             temp_array = temp_array + [0,0,0,0,0,1,0,0]
-#         elif Venue == 'Mumbai':
-#             temp_array = temp_array + [0,0,0,0,0,0,1,0]
-#         elif Venue == 'Mohali':
-#             temp_array = temp_array + [0,0,0,0,0,0,0,1]
+
             
         overs = float(request.form['overs'])
         runs = int(request.form['runs'])
@@ -85,7 +68,7 @@ def predict():
         data = np.array([temp_array])
         my_prediction = int(regressor.predict(data)[0])
               
-        return render_template('result.html', lower_limit =(10)-my_prediction, upper_limit =(-5)-my_prediction)
+        return render_template('result.html', lower_limit =my_prediction-10, upper_limit = my_prediction+5)
 
 
 
