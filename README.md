@@ -19,7 +19,8 @@
 	$ app.py
 
 * Now you will get a localhost url, open it in your web browser and you will be able to access the app
-
+<h4> Note: </h4> 
+This repository is not maintained.
 <h4>Credits:</h4>
 
 * Anuj Vyas 
